@@ -1,0 +1,81 @@
+/*
+set the main settings as
+button border, border radius, :focus, :focus-visible, :hover, cursor
+div padding, margin, borders
+p padding
+container padding and positions, structure with flex
+transation comes the default css not any library
+*/
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  /* set height to show the scroll*/
+  height: 1000px;
+}
+
+/* set both button with same style*/
+.App button {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  height: 40px;
+  transition: all 0.4s ease 0s;
+}
+
+.App button:hover {
+  background-color: lightgray;
+}
+
+.App button:focus,
+.App button:focus-visible {
+  border: 2px solid black;
+  outline: none;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(210, 210, 210, 0.6);
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: white;
+  border: 2px solid lightgray;
+  border-radius: 8px;
+  width: 400px;
+  height: 300px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-content p {
+  padding: 10px 10%;
+  text-align: left;
+}
+
+.modal-title {
+  padding: 10px;
+  width: 100%;
+}
